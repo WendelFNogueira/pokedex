@@ -1,0 +1,25 @@
+name: 🚀 Deploy frontend to firebase
+on:
+  push: 
+    branches:
+      - master
+jobs:
+  build:
+    name: 🎉 Deploy
+    runs-on: ubuntu-latest
+    steps:
+    - name: 🚚 Get latest code
+      uses: actions/checkout@master
+
+    - name: 🚚 Install dependencies
+      run: yarn
+    
+    - name: 📂 Build frontend
+      run: yarn build
+      
+    - name: Deploy firebase
+      uses: w9jds/firebase-trigger@master
+      with:
+        args: deploy
+      env:
+        FIREBASE_TOKEN: ${{ secrets.FIREBASE_CREDENTIALS }}
