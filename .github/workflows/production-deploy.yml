@@ -2,14 +2,14 @@ name: 🚀 Deploy frontend to firebase
 on:
   push: 
     branches:
-      - master
+      - main
 jobs:
   build:
     name: 🎉 Deploy
     runs-on: ubuntu-latest
     steps:
     - name: 🚚 Get latest code
-      uses: actions/checkout@master
+      uses: actions/checkout@main
 
     - name: 🚚 Install dependencies
       run: yarn
@@ -18,7 +18,7 @@ jobs:
       run: yarn build
       
     - name: Deploy firebase
-      uses: w9jds/firebase-trigger@master
+      uses: w9jds/firebase-trigger@main
       with:
         args: deploy
       env:
