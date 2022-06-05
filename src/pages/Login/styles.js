@@ -2,6 +2,7 @@ import styled from 'styled-components'
 
 export const Wrapper = styled.div`
     display: flex;
+    flex-direction: column;
     background-color: aliceblue;
     width: 100%;
     height: 100%; 
@@ -19,3 +20,6 @@ export const Button = styled.button`
         transition: .3s;
     }
 `;
+
+export const Title = styled.h1``;
+

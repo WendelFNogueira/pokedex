@@ -11,6 +11,7 @@ export const Login = () => {
   if (!signed) {
     return (
       <Wrapper>
+        <Title>Bem vindo ao Pokedex com deploy automatizado com o firebase</Title>
         <Button onClick={handleLoginFromGoogle}>Logar com o Google</Button>
       </Wrapper>
     );
