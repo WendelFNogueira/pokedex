@@ -2,7 +2,7 @@ name: 🚀 Deploy frontend to firebase
 on:
   push: 
     branches:
-      - main
+      - master
 jobs:
   build:
     name: 🎉 Deploy
