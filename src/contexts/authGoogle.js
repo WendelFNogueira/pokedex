@@ -36,6 +36,7 @@ export const AuthGoogleProvider = ({ children }) => {
         const errorMessage = error.message;
         const email = error.email;
         const credential = GoogleAuthProvider.credentialFromError(error);
+        console.log(errorCode, errorMessage, email, credential);
       });
   }
 
