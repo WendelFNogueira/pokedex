@@ -18,7 +18,7 @@ jobs:
       run: yarn build
       
     - name: Deploy firebase
-      uses: w9jds/firebase-trigger@main
+      uses: w9jds/firebase-trigger@master
       with:
         args: deploy
       env:
